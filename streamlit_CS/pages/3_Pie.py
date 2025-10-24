@@ -1,12 +1,15 @@
-import streamlit as st
+import os
 import pandas as pd
+import streamlit as st
 import plotly.express as px
 
-# Page title
 st.title("Interactive Pie Chart - Business Sectors")
 
+# Build a safe, absolute path
+csv_path = os.path.join(os.path.dirname(__file__), "..", "data", "pie_demo.csv")
+
 # Load CSV data
-df = pd.read_csv("data/pie_demo.csv")
+df = pd.read_csv(csv_path)
 
 # Display the data
 st.dataframe(df)
