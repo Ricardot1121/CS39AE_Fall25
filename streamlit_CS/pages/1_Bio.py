@@ -16,7 +16,7 @@ FUN_FACTS = [
     "I want to build interactive dashboards.",
 ]
 
-def find_photo(filename="Ren_Photo.jpg"):
+def find_photo(filename="My_Profile_Pic.jpg"):
     # Photo was saved in assets folder
     try:
         script_dir = Path(__file__).resolve().parent
@@ -33,7 +33,7 @@ def find_photo(filename="Ren_Photo.jpg"):
             return str(p)
     return None
  
-photo_src = find_photo("Ren_Photo.jpg")
+photo_src = find_photo("My_Profile_Pic.jpg")
  
 # -------------------- LAYOUT --------------------
 col1, col2 = st.columns([1, 2], vertical_alignment="center")
