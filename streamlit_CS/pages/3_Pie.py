@@ -52,3 +52,12 @@ st.write("""
 Modify the `data/test.csv` file or change the chart title above.  
 Then **refresh the Streamlit page** — your updates will automatically appear!
 """)
+
+# Observation input
+st.subheader("📝 Your Observations")
+observation = st.text_area("I see that technology is very popular in the demo data. And that Entertainment is the least popular in my demo data, which is about business sectors. I used AI for 3_Pie Microsoft Copilot. (2025, October 24). Response to prompt: “Can you give me a work cited of Copilot?” Generated using https://copilot.microsoft.com/..")
+
+if observation:
+    st.success("Thanks for your input!")
+    st.write("You wrote:")
+    st.write(observation)
