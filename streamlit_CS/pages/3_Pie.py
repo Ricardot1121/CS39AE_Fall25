@@ -7,7 +7,7 @@ import plotly.express as px
 st.title("Interactive Pie Chart - Business Sectors")
 
 # Build an absolute path to the CSV file
-csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "pie_demo.csv"))
+csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "data", "pie_demo.csv"))
 
 # Show the path being used (for debugging)
 st.caption(f"Reading CSV from: {csv_path}")
