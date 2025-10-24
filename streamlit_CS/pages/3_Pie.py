@@ -7,14 +7,14 @@ import plotly.express as px
 st.title("Interactive Pie Chart - Business Sectors")
 
 # Build an absolute path to the CSV file
-csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "pie_demo.csv"))
+csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "test.csv"))
 
 # Show the path being used (for debugging)
 st.caption(f"Reading CSV from: {csv_path}")
 
 # Check if file exists before loading
 if not os.path.exists(csv_path):
-    st.error("CSV file not found! Please ensure 'pie_demo.csv' is inside the 'data' folder.")
+    st.error("CSV file not found! Please ensure 'test.csv' is inside the 'data' folder.")
     st.stop()
 
 # Try reading the CSV file
@@ -49,6 +49,6 @@ st.plotly_chart(fig, use_container_width=True)
 # Instructions
 st.write("""
 💡 **Tip:**  
-Modify the `data/pie_demo.csv` file or change the chart title above.  
+Modify the `data/test.csv` file or change the chart title above.  
 Then **refresh the Streamlit page** — your updates will automatically appear!
 """)
