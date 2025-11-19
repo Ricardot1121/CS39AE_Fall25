@@ -3,3 +3,10 @@ import pandas as pd
 import requests
 import plotly.express as px
 import time
+import networkx as nx
+import matplotlib.pyplot as plt
+
+G = nx.Graph()
+G.add_edges_from([("Alice", "Bob"), ("Alice", "Eve"), ("Bob", "Eve")])
+nx.draw(G, with_labels=True, node_color='lightblue', font_weight='bold')
+plt.show()
