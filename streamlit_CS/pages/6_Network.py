@@ -28,14 +28,23 @@ G.add_edges_from([
 
 st.header("Network Graph")
 
-# Advanced Network Metrics for Analysis
-degree_centrality = nx.degree_centrality(G)
-betweenness_centrality = nx.betweenness_centrality(G)
-closeness_centrality = nx.closeness_centrality(G)
-eigenvector_centrality = nx.eigenvector_centrality(G, max_iter=1000)
 
- #Try with G = nx.karate_club_graph() for a big graph
-# Create a figure
+betweenness_centrality = nx.betweenness_centrality(G)
+most_popular = max(betweenness_centrality, key=betweenness_centrality.get)
+
+
+communities = list(community.greedy_modularity_communities(G))
+
+community_colors = ["red", "blue", "green", "orange", "purple"]
+
+node_color_map = {}
+
+for i, com in enumerate(communities):
+    for node in com:
+        node_color_map[node] = community_colors[i % len(community_colors)]
+
+node_color_map[most_popular] = "black"
+
 fig, ax = plt.subplots(figsize=(10, 8))
 
 # Try with G = nx.karate_club_graph() for a big graph
