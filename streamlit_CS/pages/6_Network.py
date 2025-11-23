@@ -54,3 +54,6 @@ node_colors = [node_color_map[node] for node in G.nodes()]
 nx.draw(G, pos, with_labels=True, node_color=node_colors, edge_color='gray', ax=ax)
 # Display in Streamlit
 st.pyplot(fig)
+
+st.header("Findings")
+st.markdown("""The most central Node was from Bob and I created a color indication of groups, detecting the communities.""")
