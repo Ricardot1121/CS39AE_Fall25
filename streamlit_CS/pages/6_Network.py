@@ -44,7 +44,7 @@ for i, com in enumerate(communities):
     for node in com:
         node_color_map[node] = community_colors[i % len(community_colors)]
 
-node_color_map[most_popular] = "black"
+node_color_map[most_popular] = "orange"
 
 fig, ax = plt.subplots(figsize=(10, 8))
 
