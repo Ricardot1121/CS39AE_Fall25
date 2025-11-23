@@ -36,7 +36,7 @@ most_popular = max(betweenness_centrality, key=betweenness_centrality.get)
 
 communities = list(community.greedy_modularity_communities(G))
 
-community_colors = ["red", "blue", "green"]
+community_colors = ["red", "yellow", "green"]
 
 node_color_map = {}
 
