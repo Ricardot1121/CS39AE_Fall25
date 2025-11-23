@@ -5,6 +5,7 @@ import plotly.express as px
 import time
 import networkx as nx
 import matplotlib.pyplot as plt
+from networkx.algorithms import community
 
 G = nx.Graph()
 G.add_edges_from([
@@ -35,7 +36,7 @@ most_popular = max(betweenness_centrality, key=betweenness_centrality.get)
 
 communities = list(community.greedy_modularity_communities(G))
 
-community_colors = ["red", "blue", "green", "orange", "purple"]
+community_colors = ["red", "blue", "green"]
 
 node_color_map = {}
 
