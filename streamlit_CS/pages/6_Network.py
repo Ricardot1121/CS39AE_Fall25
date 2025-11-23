@@ -50,7 +50,7 @@ fig, ax = plt.subplots(figsize=(10, 8))
 
 # Try with G = nx.karate_club_graph() for a big graph
 pos = nx.spring_layout(G)  # Force-directed layout
-nx.draw(G, pos, with_labels=True, node_color='lightgreen', edge_color='gray', ax=ax)
-
+node_colors = [node_color_map[node] for node in G.nodes()]
+nx.draw(G, pos, with_labels=True, node_color=node_colors, edge_color='gray', ax=ax)
 # Display in Streamlit
 st.pyplot(fig)
