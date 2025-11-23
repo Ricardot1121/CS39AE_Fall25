@@ -5,6 +5,7 @@ import plotly.express as px
 import time
 import networkx as nx
 import matplotlib.pyplot as plt
+from networkx.algorithms import community
 
 G = nx.Graph()
 G.add_edges_from([
