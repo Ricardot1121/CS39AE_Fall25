@@ -35,6 +35,6 @@ closeness_centrality = nx.closeness_centrality(G)
 eigenvector_centrality = nx.eigenvector_centrality(G, max_iter=1000)
 
  #Try with G = nx.karate_club_graph() for a big graph
-pos = nx.spring_layout(G)  # Force-directed layout
-nx.draw(G, pos, with_labels=True, node_color='lightgreen', edge_color='gray')
-plt.show()
+pos = nx.spring_layout(G)
+nx.draw(G, pos, with_labels=True, node_color='lightgreen', edge_color='gray', ax=ax)
+st.pyplot(fig)
